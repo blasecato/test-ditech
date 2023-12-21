@@ -2,26 +2,168 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-} */
-
-
-.button-primary {
-  @apply bg-amber-400 w-full mt-5 p-3 uppercase font-bold
+body {
+  background-color: #e8eaee;
 }
 
-.button-primary:hover {
-  @apply bg-amber-500
+.button-primary {
+  @apply bg-greenPrimary w-full uppercase font-roboto gap-1 rounded-none border-none text-white;
+  width: 48%;
+}
+.button-delete {
+  @apply bg-red-600 w-full uppercase font-roboto gap-1 rounded-none border-none text-white;
+  width: 48%;
+}
+
+.button-primary:hover, .button-delete:hover {
+  color: #fff !important;
+}
+.card-user {
+  @apply bg-white pb-0
+}
+.button-card {
+  @apply bg-transparent text-greenPrimary w-full border-transparent mt-5 rounded-none h-12
+}
+.button-card:hover {
+  @apply bg-greenPrimary border-transparent;
+  background-color: #006d69 !important;
+  border-color: transparent !important;
+  color: #fff !important;
+}
+/* textos */
+.body-bold {
+  @apply text-zinc-900 text-xl font-bold font-roboto
+}
+.small-detail {
+  @apply text-zinc-400 text-xs font-roboto
+}
+.h1 {
+  @apply text-zinc-900 text-2xl font-bold font-roboto
+}
+.h3 {
+  @apply text-xs text-gray-400
+}
+
+.container {
+  @apply max-w-7xl m-auto p-5 pt-0 pb-0;
+  min-height: calc(100vh - 59px)
+}
+.title {
+  @apply flex justify-center rounded-lg items-center h-5 w-10 bg-green-500 mt-2 
+}
+.avatar {
+  @apply w-2/5 rounded-full mb-2 mr-auto ml-auto shadow-lg shadow-zinc-400
+}
+
+.item-user {
+  @apply flex justify-between w-full mt-1;
+  height: 32px;
+}
+.copy {
+  @apply bg-transparent border-none p-0
+}
+.item-info {
+  @apply flex gap-1 items-center
+}
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 60px;
+  aspect-ratio: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  display: grid;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  --c: no-repeat linear-gradient(#046D8B 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  animation: l18-1 1.5s infinite cubic-bezier(0, 0, 1, 1), l18-2 1.5s infinite;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  grid-area: 1/1;
+  animation-timing-function: cubic-bezier(0, 0.2, 1, 1), linear;
+}
+
+.loader:after {
+  margin: 10px;
+  animation-timing-function: cubic-bezier(0, 0.4, 1, 1), linear;
+}
+
+@keyframes l18-1 {
+
+  0%,
+  10% {
+    background-size: 0 4px, 4px 0
+  }
+
+  40%,
+  60% {
+    background-size: 100% 4px, 4px 100%
+  }
+
+  90%,
+  100% {
+    background-size: 0 4px, 4px 0
+  }
+}
+
+@keyframes l18-2 {
+
+  0%,
+  49.9% {
+    background-position: 0 0, 0 0, 100% 100%, 100% 100%
+  }
+
+  50%,
+  100% {
+    background-position: 100% 0, 0 100%, 0 100%, 100% 0
+  }
+}
+
+.nav>.button-primary {
+  width: auto !important;
+}
+.item-info > .anticon {
+  @apply text-gray-500
+}
+.ant-modal-footer {
+  display: none;
+}
+
+.ant-pagination {
+  @apply w-full flex justify-end
+}
+/* estilos del header */
+.header {
+  @apply w-full bg-greenPrimary
+}
+.header-content {
+  @apply flex justify-between items-center pt-3 pb-3 max-w-7xl m-auto p-5 h-full
+}
+.logo {
+  @apply w-7
+}
+.ant-input-number {
+  width: 100%;
+}
+.ant-modal-content {
+  height: 470px;
+}
+
+.footer {
+  @apply bg-greenPrimary w-full h-32
+}
+
+.footer-content {
+  @apply max-w-7xl m-auto p-5
+}
+.ant-pagination-options {
+  display: none !important;
 }
