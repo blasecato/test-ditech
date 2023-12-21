@@ -57,14 +57,14 @@ const FormUsers = ({ handleOk }: Props) => {
     >
       <Form.Item<FieldType>
         name="firstName"
-        rules={[{ required: true, message: "Please input your username!" }]}
+        rules={[{ required: true, message: "Ingrese sus Nombres" }]}
       >
         <Input placeholder="Nombres" />
       </Form.Item>
 
       <Form.Item<FieldType>
         name="lastName"
-        rules={[{ required: true, message: "Please input your password!" }]}
+        rules={[{ required: true, message: "Ingrese sus Apellidos" }]}
       >
         <Input placeholder="Apellidos" />
       </Form.Item>
@@ -74,7 +74,7 @@ const FormUsers = ({ handleOk }: Props) => {
         rules={[
           {
             required: true,
-            message: "Please input your password!",
+            message: "Ingrese su Email",
             type: "email",
           },
         ]}
@@ -86,11 +86,12 @@ const FormUsers = ({ handleOk }: Props) => {
         name="phone"
         rules={[
           {
-            required: false,
+            message: "Ingrese su numero de telefono",
+            required: true,
           },
         ]}
       >
-        <Input placeholder="Phone" width={400} />
+        <Input placeholder="Telefono" width={400} />
       </Form.Item>
 
       <Form.Item<FieldType>
@@ -98,6 +99,7 @@ const FormUsers = ({ handleOk }: Props) => {
         rules={[
           {
             required: true,
+            message: "Seleccione su genero",
           },
         ]}
       >
@@ -112,7 +114,7 @@ const FormUsers = ({ handleOk }: Props) => {
       </Form.Item>
       <Form.Item<FieldType>
         name="picture"
-        rules={[{ required: true, message: "Please input your picture!" }]}
+        rules={[{ required: true, message: "Ingrese la url de su foto" }]}
       >
         <Input placeholder="Url de tu foto" />
       </Form.Item>
