@@ -8,7 +8,7 @@ const Header = () => {
       <div className="header-content">
         <div className="head flex items-center gap-6">
           <img className="logo" alt="logo" src={logoPng} />
-          <p className="font-roboto text-neutral-50">
+          <p className="font-roboto text-neutral-50 hidden sm:flex">
             Modulo de Consulta y Registro de Usuarios al Sistema
           </p>
         </div>

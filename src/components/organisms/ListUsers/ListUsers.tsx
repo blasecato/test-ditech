@@ -12,12 +12,8 @@ interface Props {
 const ListUsers = ({ users }: Props) => {
   const { changePage }: any = useUsersContext();
   const onChange: PaginationProps["onChange"] = (page) => {
-    console.log(page);
     changePage(page);
   };
-  console.log("====================================");
-  console.log(users);
-  console.log("====================================");
   return (
     <div>
       <h1 className="h3 text-center mt-5">Perfiles ({users.total})</h1>

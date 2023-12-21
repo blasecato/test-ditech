@@ -147,6 +147,13 @@ body {
 .header-content {
   @apply flex justify-between items-center pt-3 pb-3 max-w-7xl m-auto p-5 h-full
 }
+.header > .header-content > .nav > .button-primary {
+  @apply bg-white text-greenPrimary
+}
+.header > .header-content > .nav > .button-primary:hover {
+  @apply text-greenPrimary;
+  color: #006d69 !important
+}
 .logo {
   @apply w-7
 }

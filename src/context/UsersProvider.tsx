@@ -65,10 +65,7 @@ const UsersProvider = ({ children }: { children: React.ReactNode }) => {
           content: "Usuario creado exitosamente",
         });
       })
-      .catch(function (error) {
-        console.log("====================================");
-        console.log(error);
-        console.log("====================================");
+      .catch(function () {
         messageApi.open({
           type: "error",
           content: "Email en uso",
@@ -77,9 +74,6 @@ const UsersProvider = ({ children }: { children: React.ReactNode }) => {
   }
 
   async function updateUser(values: user) {
-    console.log("=========dsfsdfdsfsdfdsfsd====");
-    console.log(values);
-    console.log("====================================");
     const config = {
       headers: {
         "app-id": API_KEY,
